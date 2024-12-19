@@ -4,7 +4,7 @@ const map = new mapgl.Map('map', {
     zoom: 11,
 });
 
-const apiUrl = "http://176.108.249.158:5000/api/arts_data";
+const apiUrl = "data.json";
 
 async function fetchData() {
     try {
