@@ -22,7 +22,7 @@ async function fetchData() {
                 coordinates: [item.longitude, item.latitude],
                 icon: 'https://docs.2gis.com/img/mapgl/marker.svg',
             }).on('click', (e) => {
-                tg.sendData(item.id);
+                tg.sendData(String(item.id));
                 tg.close();
             });
         });
