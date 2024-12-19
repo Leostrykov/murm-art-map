@@ -5,6 +5,8 @@ const map = new mapgl.Map('map', {
 });
 
 const apiUrl = "data.json";
+let tg = window.Telegram.WebApp;
+tg.expand()
 
 async function fetchData() {
     try {
@@ -20,7 +22,7 @@ async function fetchData() {
                 coordinates: [item.longitude, item.latitude],
                 icon: 'https://docs.2gis.com/img/mapgl/marker.svg',
             }).on('click', (e) => {
-                alert(`Marker is ${item.id}`);
+                tg.sendData(item.id);
             });
         });
     } catch (error) {
