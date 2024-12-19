@@ -23,6 +23,7 @@ async function fetchData() {
                 icon: 'https://docs.2gis.com/img/mapgl/marker.svg',
             }).on('click', (e) => {
                 tg.sendData(item.id);
+                tg.close();
             });
         });
     } catch (error) {
