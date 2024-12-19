@@ -27,7 +27,7 @@ async function fetchData() {
             });
         });
     } catch (error) {
-        console.error("Произошла ошибка:", error);
+        tg.showAlert(`Произошла ошибка: ${error.message}`);
     }
 }
 
